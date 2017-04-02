@@ -15,14 +15,28 @@ public class DrawLineTest {
     }
 
     @Test
-    public void shouldDrawVerticleLine(){
-        //new DrawLine().draw(c,1,2,6,2,'x');
-       // new DrawLine().draw(c,6,3,6,4,'y');
+    public void shouldDrawVerticalLine(){
+        new DrawLine().draw(c,16,1,16,4,'x');
+        System.out.println(c.toString());
+        new DrawLine().draw(c,1,1,1,4,'y');
+        System.out.println(c.toString());
+    }
+    @Test
+    public void shouldNotDrawVerticalLine(){
+        new DrawLine().draw(c,16,1,17,4,'x');
+        System.out.println(c.toString());
+    }
 
-        new DrawLine().draw(c,16,1,20,1,'x');
-        new DrawLine().draw(c,16,3,20,3,'x');
-        new DrawLine().draw(c,16,1,16,3,'x');
-        new DrawLine().draw(c,20,1,20,3,'x');
-
+    @Test
+    public void shouldDrawHorizontalLine(){
+        new DrawLine().draw(c,11,1,20,1,'x');
+        System.out.println(c.toString());
+        new DrawLine().draw(c,1,4,19,4,'y');
+        System.out.println(c.toString());
+    }
+    @Test
+    public void shouldNotDrawHorizontalLine(){
+        new DrawLine().draw(c,16,1,17,4,'x');
+        System.out.println(c.toString());
     }
 }
